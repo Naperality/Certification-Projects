@@ -1,0 +1,69 @@
+<!DOCTYOE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="SurveyStyles.css"/>
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+      Welcome to our survey! Your insights are valuable to us. This brief questionnaire aims to gather information that will help us understand your preferences, experiences, and opinions. 
+    </p>
+    <div class="container">
+    <form id="survey-form" method="POST">
+      <fieldset>
+        <label for="name" id="name-label">Name: <input type="text" id="name" required placeholder="Your name here" /></label>
+      <label for="email" id="email-label">Email: <input type="email" id="email" required placeholder="@example.com"/></label>
+      <label for="number" id="number-label">Age (years): <input type="number" id="number" min="16" max="120" placeholder="Optional"/></label>
+      </fieldset>
+  <fieldset>
+    <label for="dropdown">How did you know this form?
+    <select id="dropdown">
+      <option>(select one)</option>
+      <option>Facebook(Meta)</option>
+      <option>Tiktok</option>
+    </select>
+    </label>
+  </fieldset>
+  <fieldset>
+        <legend>Do you trust this form? (required)</legend>
+        <label for="yes"><input id="yes" type="radio" name="answer" value="yes" class="not" checked /> Yes</label>
+        <label for="maybe"><input id="maybe" type="radio" name="answer" value="maybe" class="not"/> Maybe</label>
+        <label for="no"><input id="no" type="radio" name="answer" value="no" class="not"/> No</label>
+      </fieldset>
+      <fieldset>
+        <legend>How do you see this form? (You can select as many as you can)</legend>
+        <label for="1">
+        <input id="1" type="checkbox" value="1"class="not" /> Sketchy</label>
+        <label for="2">
+        <input id="2" type="checkbox" value="2"class="not"/> Well-designed</label>
+        <label for="3">
+        <input id="3" type="checkbox" value="3"class="not"/> Cluttered</label>
+        <label for="4">
+        <input id="4" type="checkbox" value="4"class="not"/> Confusing</label>
+        <label for="5">
+        <input id="5" type="checkbox" value="5"class="not"/> Unreliable</label>
+        <label for="6">
+        <input id="6" type="checkbox" value="6"class="not"/> Well-organized</label>
+        <label for="7">
+        <input id="7" type="checkbox" value="7"class="not"/> Responsive</label>
+        <label for="8">
+        <input id="8" type="checkbox" value="8"class="not"/> Static</label>
+        <label for="9">
+        <input id="9" type="checkbox" value="9"class="not"/> Trustworthy</label>
+        <label for="10">
+        <input id="10" type="checkbox" value="10"class="not"/> Visually-appealing</label>
+      </fieldset>
+      <fieldset>
+        <label for="comment">
+          Please provide any suggestions:
+          <textarea id="comment" rows="3" cols="37" placeholder="Comment Here..."></textarea>
+        </label>
+      </fieldset>
+<input id="submit" type="submit" value="Submit" />
+    </form>
+    </div>
+  </body>
+</html>
