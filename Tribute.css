@@ -10,3 +10,11 @@ body{
 p{
     font-size: medium;
 }
+button{
+    background-color: aliceblue;
+}
+button:hover{
+    cursor: pointer;
+    background-color: burlywood;
+    color: black;
+}
