@@ -1,20 +1,5 @@
-*{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-body{
-    display: flex;
-}
-p{
-    font-size: medium;
-}
-button{
-    background-color: aliceblue;
-}
-button:hover{
-    cursor: pointer;
-    background-color: burlywood;
-    color: black;
-}
+#image{
+    display:block;
+    max-width:100%;
+    margin:0 auto;
+  }
