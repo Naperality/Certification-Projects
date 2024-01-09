@@ -1,5 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    height: 100%;
+    text-align: center;
+}
+
+#main-doc{
+    width: auto;
+    height: auto;
+    margin-left: 300px;
+}
+
+
+
 @media screen and (max-width:400px) {
     #navbar{
-        float:none;
+        width: 200px;
+        font-size: 3.2vw;
+    }
+    #main-doc{
+        width: auto;
+        height: auto;
+        font-size: 3.2vw;
+        margin-left: 200px;
     }
 }
