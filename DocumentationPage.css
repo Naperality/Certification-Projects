@@ -5,36 +5,115 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
 }
-
+body{
+    background: black;
+}
 #navbar{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 300px;
     height: 100%;
     text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #252525;
+    margin-bottom: 10px;
+}
+#navbar header{
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+#navbar a{
+    padding: 20px;
+    border: 1px solid #bb86fc;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#navbar a:active{
+    background: #bb86fc;
+    opacity: 0.7;
+}
+
+#navbar a:hover{
+    background: #bb86fc;
 }
 
 #main-doc{
     width: auto;
     height: auto;
-    margin-left: 300px;
+    margin-left: 320px;
 }
 
+.main-section{
+    margin-top:10px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #252525;
+    color: white;
+}
 
+.main-section header{
+    text-align: center;
+    font-size: 2.3vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
-@media screen and (max-width:400px) {
+.main-section p{
+    text-indent: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+ul{
+    margin-left: 20px;
+}
+
+li{
+    font-weight: bold;
+}
+
+li p{
+    font-weight: normal;
+}
+
+footer a{
+    color: #03dac6;
+    text-decoration: none;
+}
+
+footer a:hover{
+    background-color: #018786;
+    color: white;
+}
+
+footer a:active{
+    background-color: #018786;
+    opacity: 0.5;
+}
+
+@media screen and (max-width:500px) {
     #navbar{
-        width: 200px;
+        width: 150px;
         font-size: 3.2vw;
+    }
+    #navbar header{
+        width: 150px;
+        font-size: 8px;
     }
     #main-doc{
         width: auto;
         height: auto;
         font-size: 3.2vw;
-        margin-left: 200px;
+        margin-left: 170px;
     }
 }
