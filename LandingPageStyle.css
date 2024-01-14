@@ -1,14 +1,85 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
 }
-#nav-bar{
+
+body{
+    background: rgb(227, 227, 227);
+}
+
+header img{
+    width: 250px;
+    height:100px;
     position: fixed;
     top: 0;
+    left: 0;
+}
+
+#nav-bar{
+    width: 50vw;
+    position: fixed;
+    top: 2.5vh;
+    right: 0;
     display:flex;
+    gap: 10%;
+    justify-content:right;
+    align-items: right;
+    /*background-color: #0066b2; #7CB9E8;*/
+    font-size: larger;
+    overflow: hidden;
+}
+
+a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+}
+a:hover{
+    background-color: lightblue;
+    color: whitesmoke;
+}
+
+.main-section{
+    font-size: 3.5vh;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.main-section header{
+    padding: 10px;
+    font-size: 5vh;
+    margin-top: 20px;
+}
+
+.main-section .first{
+    margin-top: 80px;
+}
+
+input{
+    margin: 5px;
+    display: inline-block;
+    font-size: 2.5vh;
+    text-align: center;
+    border-style: dotted;
+}
+
+#submit{
+    margin: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#submit:hover{
+    background-color: lightblue;
+    color: whitesmoke;
+    border: 1px dotted lightblue;
 }
 
 @media screen and (max-width:500px) {
