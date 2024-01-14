@@ -2,9 +2,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LandingPageStyle.css">
     <title>Landing Page</title>
 </head>
 <body>
-    
+    <header id="header">
+        <img src="https://static.vecteezy.com/system/resources/previews/010/445/918/original/elephant-logo-free-vector.jpg" 
+        alt="Logo" id="header-img">
+        <nav id="nav-bar">
+            <a href="#Intro" class="nav-link">Intro</a>
+            <a href="#Fun-Facts" class="nav-link">Fun Facts</a>
+            <a href="#References" class="nav-link">References</a>
+        </nav>
+    </header>
+    <main>
+        <section class="main-section" id="Intro">
+            <header>Intro</header>
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/FwOoC0QdeG4?si=l5UIXv_LNHqhXGHS" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            id="video" allowfullscreen></iframe>
+        </section>
+        <section class="main-section" id="Fun_Facts">
+            <header>Fun Facts</header>
+            <form action="https://www.freecodecamp.com/email-submit" id="form" method="post">
+                <input type="email" id="email" placeholder="Your Email Here">
+                <input type="submit" id="submit">
+            </form>
+        </section>
+        <section class="main-section" id="References">
+            <header>References</header>
+        </section>
+    </main>
 </body>
 </html>
