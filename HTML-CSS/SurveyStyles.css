@@ -7,11 +7,13 @@ body{
     font-family:Tahoma;
     font-size:16px;
   }
+
   h1, p{
     margin:20px auto;
     text-align:center;
     width:500px;
   }
+
   form{
     max-width:600px;
     min-width:300px;
@@ -19,14 +21,17 @@ body{
     margin:0 auto;
     padding-bottom:50px;
   }
+
   fieldset{
     border:none;
     padding:20px 0;
   }
+
   label{
     display:block;
     margin:10px 0;
   }
+
   input,
   textarea,
   select {
@@ -35,17 +40,20 @@ body{
       min-height: 30px;
       display:inlineblock;
     }
+
   input, textarea , select{
   background-color: #0a0a23;
       border: 1px solid #0a0a23;
       color: #ffffff;
     }
+
   .not{
     width:unset;
     margin: 0 0.5em 0 0;
     vertical-align:middle;
     display: inline; 
   }
+  
   .container{
     min-width:300px;
     max-width:600px;
