@@ -1,23 +1,3 @@
-// 
-// const textInput = document.getElementById('text-input');
-// const checkBtn = document.getElementById('check-btn');
-// const result = document.getElementById('result');
-// let line = "";
-
-// //assigning value from text
-// let text = textInput.ariaValueText
-// //check palindrom
-// checkBtn.onclick = ()=>{
-//     console.log();
-//  };
-
-// function palindrome(){
-//     const regex = /[^A-Za-z0-9]/g;
-//     const textLower = text.toLowerCase().replace(regex,'');
-//     const reverseText = textLower.split('').reverse().join('');
-//     console.log(textLower);
-//     return textLower;
-// }*/
 //getting data and declaring const
 const userInput = document.getElementById('text-input');
 const checkPalindromeBtn = document.getElementById('check-btn');
