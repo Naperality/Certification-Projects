@@ -45,6 +45,7 @@ const show = input => {
   const originalInput = input; // Store for later output
   //checking for invalid inputs
   let line = ``;
+  const regex = /[A-Za-z+]/g;
   if (input === '') {
     line = `Please enter a valid number`;
     readCode(line);
@@ -56,6 +57,9 @@ const show = input => {
   }else if(input>3999){
     line = `Please enter a number less than or equal to 3999`;
     readCode(line);
+    return;
+  }else if(input.match(regex)){
+    alert("Please Enter a Number!")
     return;
   }
   const answer = decimalToRoman(input);
