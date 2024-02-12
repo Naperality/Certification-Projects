@@ -5,10 +5,10 @@ const clearBtn = document.getElementById("clear-btn");
 const results = document.getElementById("results-div");
 
 //regex to catch
-const format1 = /\d/g;
+const format1 = /1 \d\d\d-\d\d\d-\d\d\d\d/;
 //dollar - "()" capture , "|" or, "[]" get all, "?" optional
 //"?:" non capturing group but can still match 
-const format2 = /[0-9]+ (?:hundred|thousand|million|billion)? dollars/i;
+const format2 = /1?\s(\d\d\d)?\s\d\d\d-\d\d\d\d/;
 //strings- "[e3]" means e and 3 to match, "\s" looks for spaces or line breaks, 
 //"^" means beginning of string, "$" means end of string
 const format3 = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:$|\s)/i;
