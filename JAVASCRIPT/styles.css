@@ -106,7 +106,6 @@ button:hover{
 }
 
 #results-div{
-    display: hidden;
     width: 50%;
     font-size: 1.5em;
     text-align: center;

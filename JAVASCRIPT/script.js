@@ -4,13 +4,28 @@ const checkBtn = document.getElementById("check-btn");
 const clearBtn = document.getElementById("clear-btn");
 const results = document.getElementById("results-div");
 
+//regex to catch
+const format1 = /\d/g;
+//dollar - "()" capture , "|" or, "[]" get all, "?" optional
+//"?:" non capturing group but can still match 
+const format2 = /[0-9]+ (?:hundred|thousand|million|billion)? dollars/i;
+//strings- "[e3]" means e and 3 to match, "\s" looks for spaces or line breaks, 
+//"^" means beginning of string, "$" means end of string
+const format3 = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:$|\s)/i;
+//stock alert 
+const format4 = /(?:^|\s)[s5][t7][o0][c{[(]k [a@4]l[e3]r[t7](?:$|\s)/i;
+//dear friend
+const format5 = /(?:^|\s)d[e3][a@4]r fr[i1|][e3]nd(?:\s|$)/i;
+//
+const format6 = /(?:^|\s)d[e3][a@4]r fr[i1|][e3]nd(?:\s|$)/i;
+//
+const format7 = /(?:^|\s)d[e3][a@4]r fr[i1|][e3]nd(?:\s|$)/i;
+
+//arrays of  regex
+const formatList = [format1];
+
 //funciton for getting values and validations
-const show = (input) => {
-    let originalInput = input;
-    let optional = originalInput.split('').join('');
-    let line = '';
-    
-};
+const isValid = (msg) => formatList.some((regex) => regex.test(msg));
 
 //function for delete
 const clear = () => results.innerText = "";
@@ -18,15 +33,25 @@ const clear = () => results.innerText = "";
 //event listeners for buttons and enter key
 //event listener for check button
 checkBtn.addEventListener('click', () => {
-    show(userInput.value);
-    userInput.value = '';
+    if (userInput.value === "") {
+    alert("Please provide a phone number");
+    return;
+  }
+
+  results.textContent = isValid(userInput.value) ? `Valid US number: ${userInput.value}`: `Invalid US number: ${userInput.value}`;
+  userInput.value = "";
 });
 
 //if entering key is pressed instead of check button
 userInput.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
-    show(userInput.value);
-    userInput.value = '';
+    if (userInput.value === "") {
+    alert("Please provide a phone number");
+    return;
+  }
+
+  results.innerText = isValid(userInput.value) ? `Valid US number: ${userInput.value}`: `Invalid US number: ${userInput.value}`;
+  userInput.value = "";
   }
 });
 
