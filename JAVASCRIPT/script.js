@@ -5,17 +5,18 @@ const clearBtn = document.getElementById("clear-btn");
 const results = document.getElementById("results-div");
 
 //regex to catch
-const format1 = /1\s?\d{3}-\d{3}-\d{4}/;
+//const format1 = /1\s?\d{3}-\d{3}-\d{4}/;
+const format1 = /^([+]?1[\s]?)?((?:[(](?:[2-9]1[02-9]|[2-9][02-8][0-9])[)][\s]?)|(?:(?:[2-9]1[02-9]|[2-9][02-8][0-9])[\s.-]?)){1}([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2}[\s.-]?){1}([0-9]{4}){1}$/;
 //dollar - "()" capture , "|" or, "[]" get all, "?" optional
 //"?:" non capturing group but can still match 
-const format2 = /1\s?\(\d{3}\)\s?\d{3}-\d{4}/;
+//const format2 = /1\s?\(\d{3}\)\s?\d{3}-\d{4}/;
 //strings- "[e3]" means e and 3 to match, "\s" looks for spaces or line breaks, 
 //"^" means beginning of string, "$" means end of string
-const format3 = /[\(?\d{3}[\s-\)]?\d{3}[\s-]?\d{4}]/;
+//const format3 = /[\(?\d{3}[\s-\)]?\d{3}[\s-]?\d{4}]/;
 
 
 //arrays of  regex
-const formatList = [format1,format2,format3];
+const formatList = [format1];
 
 //funciton for getting values and validations
 const isValid = (msg) => formatList.some((regex) => regex.test(msg));
